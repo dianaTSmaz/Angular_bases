@@ -1,0 +1,23 @@
+
+<!--Para actualizar el valor de las variables se
+usa la interpolacion y se realiza: {{variable name}}-->
+<h2>{{name}}</h2>
+
+<td>Nombre: </td>
+<dd>{{name}}</dd>
+<td>Edad : </td>
+<dd>{{age}}</dd>
+<td>Superpoder: </td>
+<ul>
+    <li>Ver mundos alternos</li>
+    <li>Modificar escenarios futuros</li>
+    <li>Viajar a multiversos</li>
+</ul>
+<td>Capitalized: </td>
+<dd>{{CapitalizedName}}</dd>
+<button 
+*ngIf="age !== 33"
+class="btn btn-primary" 
+(click)="changeHero()"> Cambiar nombre</button>
+<button class = "btn btn-primary" (click)="changeAge()">Cambiar super poder</button>
+<button class="btn btn-primary" (click) = "reset()">Reset</button>
