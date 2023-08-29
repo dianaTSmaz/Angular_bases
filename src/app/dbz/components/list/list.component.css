@@ -1,0 +1,12 @@
+.form--elements{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+
+button{
+    margin-top: 5px;
+    margin-left: 2rem;
+    
+}

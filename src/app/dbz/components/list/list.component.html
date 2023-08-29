@@ -1,0 +1,50 @@
+<p>list works!!</p>
+
+<!--las clases row y col pertenenecen a bootstrap-->
+    <div class="col">
+
+        <h4>Listado</h4>
+        
+            <ul class="list-group">
+                <!--CharacterList corresponde a la input , asi que aqui se pasa la input-->
+         
+               <li *ngFor=" let Character of characterList;
+                            let i=index;
+                            let isFirst=first;
+                            let isLast=last;
+                            let isOdd=odd;
+                            let isEven = even"
+                    class="list-group-item"
+    
+                    [ngClass] = "
+                    {'list-group-item-dark':isLast,
+                      'list-group-item-primary': isOdd,
+                       'list-group-item-danger': isEven}">
+                  
+                  <div class="form--elements">
+                    <span class="text-primary"> {{ i + 1 }}. </span>
+    
+                    <strong> Name: </strong>
+                    <span>{{Character.name}}-</span>
+                    
+                    <strong>Power: </strong>
+                    <span>{{Character.power}}</span>
+      
+                    <!--<span class="text-secondary"> <strong> First:</strong>{{isFirst}}</span>
+                    <span class="text-success"> <strong> Last:</strong>{{isEven}}</span>
+                    <span class="text-info"> <strong> Even:</strong>{{isEven}}</span>--->
+                  </div>     
+                  
+    
+                    <button class="btn btn-primary "  (click)="OnDeleteCharacter(Character.id)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+                        <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+                      </svg></button>
+                
+
+                </li>
+            </ul>  
+        </div>        
+        
+       
+       
+

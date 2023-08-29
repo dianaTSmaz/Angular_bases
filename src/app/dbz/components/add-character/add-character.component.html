@@ -1,0 +1,29 @@
+
+<h4>Add a character!!</h4>
+        <!--Se ocupa un form para hacer un posteo de la data-->
+        <form class="form-dbz" (ngSubmit)="emitCharacter()">
+
+           <input 
+           type="text" 
+           [(ngModel)]="character.name" 
+           name="name"
+           class="form-control mb-2" 
+           placeholder="Name">
+     <!--Importante recordar que el one way data binding
+         Se usa [] para relacionar un atributo, como value.
+          y () para evento. Por lo tanto se actualiza el value de ese atributo 
+         cuando se ejecuta un evento-->
+           <input 
+           type="number" 
+           [(ngModel)] = "character.power"
+           name="power"
+           class="form-control mb-2"
+           placeholder="Power">
+
+           <button type="submit" class="btn btn-primary"> Add </button>
+            <!---(click)="emitCharacter()"-->
+            
+
+           <pre>{{ character | json}}</pre>
+           
+        </form>

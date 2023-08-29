@@ -1,0 +1,9 @@
+
+.form-dbz{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control{
+    margin-bottom: 2rem;
+}
